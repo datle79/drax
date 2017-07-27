@@ -1,9 +1,9 @@
 FROM centos:centos7
 EXPOSE 7777
 
-WORKDIR /
-ADD drax /
-RUN chmod 755 /drax
+RUN mkdir /app
+ADD drax /app
+RUN chmod 755 /app/drax
 
 
-ENTRYPOINT [/drax]
+ENTRYPOINT ["/app/drax"]
